@@ -26,7 +26,7 @@ public class Main {
 
         /*
         Problem 03: Java If-Else
-        Usar el condicional IF / ELSE para determinar si un valor es par o impar y dar un mensaje u otro. */
+        Usar el condicional IF / ELSE para determinar si un valor es par o impar y dar un mensaje u otro.
 
         Scanner scanner = new Scanner(System.in);
         int myNumber = scanner.nextInt();
@@ -48,5 +48,24 @@ public class Main {
         else{
             System.out.println("El número debe ser mayor a 1 y menor a 100");
         }
+         */
+
+        /*
+        Problem 04: Java Stdin and Stdout II
+        Leer un int, un double y un string y sacarlos con System.out.println()
+        HAY UN DETALLE IMPORTANTE CON SCANNER.NETXLINE();
+        */
+
+        Scanner scanner = new Scanner(System.in);
+        int i = scanner.nextInt();
+        double d = scanner.nextDouble();
+        scanner.nextLine(); // IMPORTANTE!!!!!!!!!!!!!!!!!!
+        String s = scanner.nextLine();
+        scanner.close();
+
+        System.out.println("String: " +s);
+        System.out.println("Double: " +d);
+        System.out.println("Int: " +i);
+
     }
 }
