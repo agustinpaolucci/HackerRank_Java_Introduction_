@@ -84,7 +84,7 @@ public class Main {
         Problem 05: Java Output Formatting
         Uso del metodo printf con sus modificadotes y flags.
         El método printf saca por consola un string con el formato que queremos.
-        */
+
 
         System.out.println("================================");
         Scanner scr =new Scanner(System.in);
@@ -95,6 +95,20 @@ public class Main {
             System.out.printf("%03d%n", num01); // (d) int de 3 espacios que si tiene menos ponga cero adelante y salto de lina
         }
         System.out.println("================================");
+        */
+
+        /*
+        Problem 06: Java Loops I
+        Uso de loops para hacer una tabla de multiplicar a partir de un número ingresado.
+        */
+
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(bufferedReader.readLine().trim());
+        for(int i = 1; i <= 10; i++){
+            int result = N * i;
+            System.out.println(N +" x " +i+" = "+(result));
+        }
+        bufferedReader.close();
     }
 }
 
