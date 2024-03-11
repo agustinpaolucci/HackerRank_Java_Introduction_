@@ -154,7 +154,7 @@ public class Main {
         long -- INTEGRAL  64 BITS  -- DESDE -2 a la 63 hasta (2 elevado a la 63) menos 1.
         float -- DECIMAL
         double -- DECIMAL
-        */
+
 
         Scanner scr = new Scanner(System.in);
         int cantidadCasos = scr.nextInt();
@@ -183,5 +183,22 @@ public class Main {
                 System.out.println(scr.next()+" can't be fitted anywhere.");
             }
         }
+        */
+
+
+        /*
+        Problem 09: Java End-of-file.
+        Pegar este texto y que por cada linea (que son cantidad n) lo imprima poniendole un numero adelante.
+        Hello world
+        I am a file
+        Read me until end-of-file.
+        */
+        Scanner scanner = new Scanner(System.in);
+        int lineNumber = 1;
+        while (scanner.hasNext()){
+            System.out.println(lineNumber + " " + scanner.nextLine());
+            lineNumber++;
+        }
+        scanner.close();
     }
 }
