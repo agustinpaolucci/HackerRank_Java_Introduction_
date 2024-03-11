@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.io.*;
 import java.math.*;
@@ -204,19 +205,46 @@ public class Main {
 
         /*
         Problem 10: Java Static Initializer Block
-        Calculo de un area de un paralelogramo a partir del ingreso de dos variables.
-        */
 
+        BLOQUE STATICO >>> con el bloque en hackerrank funciona.
+
+        private static int B;
+        private static int H;
+        private static boolean flag;
+
+        static{
+            Scanner scanner = new Scanner(System.in);
+            B = scanner.nextInt();
+            H = scanner.nextInt();
+            scanner.close();
+
+            // BLOQUE HACKERRANCK
+            if(B > 0 && H > 0){
+                flag = true;
+            }
+            else{
+                flag = false;
+                System.out.println("java.lang.Exception: Breadth and height must be positive");
+            }
+        }
+         */
+
+        /*
+        Problema 11 : Java Int to String
+        */
         Scanner scanner = new Scanner(System.in);
-        int base = scanner.nextInt();
-        int altura = scanner.nextInt();
-        if(base > 0 && altura > 0){
-            int areaParalelogramo = base * altura;
-            System.out.println(areaParalelogramo);
-        }
-        else{
-            System.out.println("java.lang.Exception: Breadth and height must be positive");
-        }
+        int n = scanner.nextInt();
         scanner.close();
+
+        String s = Integer.toString(n); // Castea un int a un string.
+
+        if (n == Integer.parseInt(s)) {
+            System.out.println("Good job");
+        } else {
+            System.out.println("Wrong answer.");
+        }
+        // Lectura del IF:
+        // si n que es int, es IGUAL, al convertir a S (que es string) a INT entonces... Good job
+
     }
 }
