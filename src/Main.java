@@ -192,12 +192,30 @@ public class Main {
         Hello world
         I am a file
         Read me until end-of-file.
-        */
+
         Scanner scanner = new Scanner(System.in);
         int lineNumber = 1;
         while (scanner.hasNext()){
             System.out.println(lineNumber + " " + scanner.nextLine());
             lineNumber++;
+        }
+        scanner.close();
+        */
+
+        /*
+        Problem 10: Java Static Initializer Block
+        Calculo de un area de un paralelogramo a partir del ingreso de dos variables.
+        */
+
+        Scanner scanner = new Scanner(System.in);
+        int base = scanner.nextInt();
+        int altura = scanner.nextInt();
+        if(base > 0 && altura > 0){
+            int areaParalelogramo = base * altura;
+            System.out.println(areaParalelogramo);
+        }
+        else{
+            System.out.println("java.lang.Exception: Breadth and height must be positive");
         }
         scanner.close();
     }
