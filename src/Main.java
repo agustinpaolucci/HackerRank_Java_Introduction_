@@ -11,10 +11,8 @@ import java.util.stream.*;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
-
-
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         /*
         Problem 01: Welcome to Java!
         Mostrar mensaje por consola
@@ -120,16 +118,16 @@ public class Main {
         es sumarle (2^x * b).
         Otro detalle importante es que hay dos ciclos for y no se puede usar la letra i en ambos como condicion de la
         iteracion.
-        */
 
-        Scanner in = new Scanner(System.in);
-        int t = in.nextInt();
+
+        Scanner scr = new Scanner(System.in);
+        int t = scr.nextInt();
         if(t >= 0 && t<=500) {
             for(int i=0; i<t; i++){
                 double suma = 0;
-                int a = in.nextInt();
-                int b = in.nextInt();
-                int n = in.nextInt();
+                int a = scr.nextInt();
+                int b = scr.nextInt();
+                int n = scr.nextInt();
                 if(a >= 0 && a <= 50 && b >=0 && b<=50 && n>=1 && n<=15) {
                     for (int x = 0; x < n; x++) {
                         suma = suma + (Math.pow(2, x) * b);
@@ -139,7 +137,51 @@ public class Main {
                 System.out.print("\n"); // Ojo la salida. Tiene que ser println pero con salto de linea.
             }
         }
-        in.close();
+        scr.close();
+        */
+
+        /*
+        Problem 08: Java Datatypes
+
+        Reference: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
+
+        Java tiene 8 tipos de datos primitivos;
+        char --CARACTER
+        boolean -- BOOLEANO
+        byte -- INTEGRAL  8 BITS   -- DESDE -128 hasta 127.
+        short -- INTEGRAL  16 BITS -- DESDE -32768 hasta 32767.
+        int -- INTEGRAL  32 BITS   -- DESDE -2 a la 31 hasta (2 elevado a la 31) menos 1.
+        long -- INTEGRAL  64 BITS  -- DESDE -2 a la 63 hasta (2 elevado a la 63) menos 1.
+        float -- DECIMAL
+        double -- DECIMAL
+        */
+
+        Scanner scr = new Scanner(System.in);
+        int cantidadCasos = scr.nextInt();
+
+        for(int i=0; i<cantidadCasos; i++)
+        {
+            try
+            {
+                long numero = scr.nextLong();
+                System.out.println(numero +" can be fitted in:");
+                if(numero >= -128 && numero <= 127){
+                    System.out.println("* byte");
+                }
+                if(numero >= -32768 && numero <= 32767){
+                    System.out.println("* short");
+                }
+                if(numero >= (Math.pow(-2,31)) && numero <= (Math.pow(2,31)-1)){
+                    System.out.println("* int");
+                }
+                if(numero >= (Math.pow(-2,63)) && numero <= (Math.pow(2,63)-1)){
+                    System.out.println("* long");
+                }
+            }
+            catch(Exception e)
+            {
+                System.out.println(scr.next()+" can't be fitted anywhere.");
+            }
+        }
     }
 }
-
