@@ -12,6 +12,7 @@ import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 
+
 public class Main {
     public static void main(String[] args) throws IOException {
         /*
@@ -100,7 +101,7 @@ public class Main {
         /*
         Problem 06: Java Loops I
         Uso de loops para hacer una tabla de multiplicar a partir de un número ingresado.
-        */
+
 
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(bufferedReader.readLine().trim());
@@ -109,6 +110,36 @@ public class Main {
             System.out.println(N +" x " +i+" = "+(result));
         }
         bufferedReader.close();
+
+         */
+
+        /*
+        Problem 07: Java Loops II
+        Es crear una secuencia de tipo (a + 2^0 * b), (a + 2^1 * b), (a + 2^2 * b).
+        La gracia está en darse cuenta que el valor de a es fijo, y lo que cambia y se hace con un loop
+        es sumarle (2^x * b).
+        Otro detalle importante es que hay dos ciclos for y no se puede usar la letra i en ambos como condicion de la
+        iteracion.
+        */
+
+        Scanner in = new Scanner(System.in);
+        int t = in.nextInt();
+        if(t >= 0 && t<=500) {
+            for(int i=0; i<t; i++){
+                double suma = 0;
+                int a = in.nextInt();
+                int b = in.nextInt();
+                int n = in.nextInt();
+                if(a >= 0 && a <= 50 && b >=0 && b<=50 && n>=1 && n<=15) {
+                    for (int x = 0; x < n; x++) {
+                        suma = suma + (Math.pow(2, x) * b);
+                        System.out.print(a + (int) (suma) + " ");
+                    }
+                }
+                System.out.print("\n"); // Ojo la salida. Tiene que ser println pero con salto de linea.
+            }
+        }
+        in.close();
     }
 }
 
