@@ -7,10 +7,5 @@ public class Lamergeadora {
     public Lamergeadora() {
     }
 
-    public Lamergeadora(String usuario, String email, int edad) {
-        this.usuario = usuario;
-        this.email = email;
-        this.edad = edad;
-    }
 }
 

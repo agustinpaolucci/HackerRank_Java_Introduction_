@@ -241,7 +241,7 @@ public class Main {
         if (n == Integer.parseInt(s)) {
             System.out.println("Good job");
         } else {
-            //System.out.println("Wrong answer.");
+            System.out.println("Wrong answer.");
         }
         // Lectura del IF:
         // si n que es int, es IGUAL, al convertir a S (que es string) a INT entonces... Good job
