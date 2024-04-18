@@ -243,6 +243,12 @@ public class Main {
         } else {
             System.out.println("Wrong answer.");
         }
+
+/*
+         Lectura del IF:
+         si n que es int, es IGUAL, al convertir a S (que es string) a INT entonces...
+*/
+
         /* HACER EL 12 */
 }
 }
