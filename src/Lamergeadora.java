@@ -30,5 +30,14 @@ public class Lamergeadora {
     public void setEdad(int edad) {
         this.edad = edad;
     }
+
+    @Override
+    public String toString() {
+        return "Lamergeadora{" +
+                "usuario='" + usuario + '\'' +
+                ", email='" + email + '\'' +
+                ", edad=" + edad +
+                '}';
+    }
 }
 
