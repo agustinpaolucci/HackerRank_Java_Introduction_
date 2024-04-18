@@ -243,9 +243,6 @@ public class Main {
         } else {
             System.out.println("Wrong answer.");
         }
-        // Lectura del IF:
-        // si n que es int, es IGUAL, al convertir a S (que es string) a INT entonces... Good job
-        // COMENTANDO EN REPO ORIGINAL PARA AHE HAYA CAMBIOS QUE TRAER
-       //  2DO COMENTARIO
+        /* HACER EL 12 */
 }
 }
